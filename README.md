@@ -13,6 +13,7 @@ where ```$names``` is an array of the names of the post types you wish to create
 Currently this block only creates post types with the following defaults:
 
 ```
+    $prop = 'Your post type name'; // Handled internally by the block
     $text_domain = 'your-plugin-textdomain';
     $labels = [
         'name'               => _x( $prop, 'post type general name', $text_domain ),
