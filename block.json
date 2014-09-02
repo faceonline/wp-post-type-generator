@@ -1,0 +1,25 @@
+{
+  "name": "wp-post-type-generator",
+  "version": "0.0.0",
+  "authors": [
+    "Aaron Taylor <aaronfacetaylor@gmail.com>"
+  ],
+  "description": "A generator for WordPress custom post types",
+  "main": "wp-post-type-generator.php",
+  "keywords": [
+    "wordpress",
+    "custom",
+    "post",
+    "generator"
+  ],
+  "license": "MIT",
+  "homepage": "http://github.com/faceonline/wp-custom-post-type-generator",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "blocks",
+    "test",
+    "tests"
+  ]
+}
