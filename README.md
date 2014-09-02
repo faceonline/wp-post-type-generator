@@ -1,7 +1,18 @@
-<?php
+# wp-post-type-generator
 
-$block->document->each('@list', function($item, $prop) use ($block) {
-    // TODO: Handle custom labels
+*A simple generator for WordPress custom post types*
+
+## Usage
+```
+block('wp-post-type-generator', ['@list' => $names])
+```
+
+where ```$names``` is an array of the names of the post types you wish to create.
+
+### Caveats
+Currently this block only creates post types with the following defaults:
+
+```
     $text_domain = 'your-plugin-textdomain';
     $labels = [
         'name'               => _x( $prop, 'post type general name', $text_domain ),
@@ -26,13 +37,13 @@ $block->document->each('@list', function($item, $prop) use ($block) {
         'show_ui'            => true,
         'show_in_menu'       => true,
         'query_var'          => true,
-        'rewrite'            => array( 'slug' => strtolower($prop) ),
+        'rewrite'            => array( 'slug' => strtolower($prop )),
         'capability_type'    => 'post',
         'has_archive'        => true,
         'hierarchical'       => true,
         'menu_position'      => null,
         'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
-    ];
+    ]
+```
 
-    register_post_type($prop, $args);
-});
+
